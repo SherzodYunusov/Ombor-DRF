@@ -13,6 +13,6 @@ class StatistikaModelViewSet(ModelViewSet):
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
-        queryset = Statistika.objects.filter(user=self.request.user)
+        queryset = Statistika.objects.filter(ombor__user=self.request.user)
         return queryset
 # Create your views here.

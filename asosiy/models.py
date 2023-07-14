@@ -1,4 +1,5 @@
 from django.db import models
+from userapp.models import Ombor
 
 class Mahsulot(models.Model):
     tanlov = (('dona', 'dona'), ('kg', 'kg'),

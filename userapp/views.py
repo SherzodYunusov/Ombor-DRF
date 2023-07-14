@@ -13,6 +13,6 @@ class OmborModelSetView(ModelViewSet):
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
-        queryset = Ombor.objects.filter(user=self.request.user)
+        queryset = Ombor.objects.filter(ombor__user=self.request.user)
         return queryset
 # Create your views here.

@@ -23,7 +23,7 @@ class MijozModelViewSet(ModelViewSet):
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
-        queryset = Mijoz.objects.filter(user=self.request.user)
+        queryset = Mijoz.objects.filter(ombor__user=self.request.user)
         return queryset
 
 
